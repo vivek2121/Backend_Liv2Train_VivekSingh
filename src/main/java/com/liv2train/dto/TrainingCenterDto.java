@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 public class TrainingCenterDto {
 
 	private Long trainingCenterId;
-	@Size(max = 40)
+	@Size(max = 40,message = "center name must be less than 40")
 	private String centerName;
 	@Pattern(regexp="^[a-zA-Z0-9]{12}",message = "Center Code must be 12 character")
 	private String centerCode;
